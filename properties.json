@@ -1,0 +1,7 @@
+[ {
+  "description" : "The alignment of the text",
+  "name" : "align",
+  "options" : [ "left", "center", "right" ],
+  "type" : "dropdown",
+  "value" : 0
+} ]
