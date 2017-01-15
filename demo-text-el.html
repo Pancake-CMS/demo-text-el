@@ -1,3 +1,5 @@
+<link rel="import" href="../content-editor/content-editor.html">
+
 <!-- this is a demo element that is being rendered by row-adder element -->
 <dom-module id="demo-text-el">
     <style>
@@ -18,11 +20,13 @@
         }
     </style>
     <template>
-        <p class$="[[alignClass]]">Hello World</p>
+        <p class$="[[alignClass]]" is-content="inline">Hello World</p>
     </template>
     <script>
         Polymer({
             is: 'demo-text-el',
+
+            behaviors: [ContentEditorBehaviour],
 
             properties: {
                 align: {
