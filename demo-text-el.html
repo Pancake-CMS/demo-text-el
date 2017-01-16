@@ -3,12 +3,18 @@
 <!-- this is a demo element that is being rendered by row-adder element -->
 <dom-module id="demo-text-el">
     <style>
-        p{
+        :host {
+            display: block;
+        }
+        div{
             background: cyan;
             color: black;
             font-size: 16px;
         }
 
+        h4 {
+            max-width: 400px;
+        }
         .left {
             text-align: left;
         }
@@ -20,8 +26,10 @@
         }
     </style>
     <template>
-        <p class$="[[alignClass]]" is-content="inline" content-id="usual-paragraph">Hello World</p>
-        <h4 is-content="inline" content-id="heading">Hello World</h4>
+        <div>
+            <h4 is-content="inline" content-id="heading">Some Random Demo Heading</h4>
+            <div class$="[[alignClass]]" is-content="wsywig" content-id="usual-paragraph">Some random wsywig field</div>
+        </div>
     </template>
     <script>
         Polymer({
