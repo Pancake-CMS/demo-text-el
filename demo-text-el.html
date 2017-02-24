@@ -29,6 +29,7 @@
         <div>
             <h4 is-content="inline" content-id="heading">Some Random Demo Heading</h4>
             <div class$="[[alignClass]]" is-content="wsywig" content-id="usual-paragraph">Some random wsywig field</div>
+            <button on-click="handleClick">Go to next page</button>
         </div>
     </template>
     <script>
@@ -63,6 +64,13 @@
                     case 1: return 'center';
                     case 2: return 'right';
                 }
+            },
+
+            handleClick: function() {
+                this.fire('iron-signal', {
+                    name: 'pancake-player-route-changed',
+                    data: '/pages/en-US/product-page'
+                });
             }
         });
     </script>
